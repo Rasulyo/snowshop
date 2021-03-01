@@ -1,0 +1,1 @@
+export const API_REGISTRATION = "http://localhost:8000/accounts"

@@ -1,0 +1,10 @@
+.hero_container{
+    width: 100%;
+}
+
+.hero_video{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    filter: brightness(40%);
+}
