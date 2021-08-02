@@ -1,5 +1,5 @@
 import React from 'react';
-import heroVideo from '../../assets/video/MyMovie4.mp4'
+import MyMovie4 from '../../assets/video/MyMovie4.mp4'
 import classes from './Hero.module.css'
 import Navbar from "../../containers/Navbar/Navbar";
 
@@ -14,7 +14,7 @@ export default function Hero() {
                 muted
             >
                 <source
-                    src={heroVideo}
+                    src={MyMovie4}
                     type="video/mp4"
                 />
             </video>
