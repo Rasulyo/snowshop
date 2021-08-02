@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 
-/src/assets/video/MyMovie4.mp4
+# /src/assets/video/MyMovie4.mp4
