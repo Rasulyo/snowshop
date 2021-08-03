@@ -50,9 +50,9 @@ const ItemList = () => {
 
     useEffect(() => {
         if(filter) {
-            getItems(`http://localhost:8000/items?_limit=6&_page=${page}&q=${searchValue}&type=${filter}`)
+            getItems(`https://snowshop.herokuapp.com/items?_limit=6&_page=${page}&q=${searchValue}&type=${filter}`)
         }else {
-            getItems(`http://localhost:8000/items?_limit=6&_page=${page}&q=${searchValue}`)
+            getItems(`https://snowshop.herokuapp.com/items?_limit=6&_page=${page}&q=${searchValue}`)
         }
     }, [page, searchValue, filter])
 
@@ -68,7 +68,7 @@ const ItemList = () => {
     }
 
     function getCategory(str) {
-        axios.get(`http://localhost:8000/${str}`).then(res => console.log(res))
+        axios.get(`https://snowshop.herokuapp.com/${str}`).then(res => console.log(res))
     }
 
     return (

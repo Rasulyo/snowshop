@@ -52,7 +52,7 @@ const ContextItemProvider = ({children}) => {
     }
 
     const getMain = async()=>{
-        const{data} = axios('http://localhost:8000/items')
+        const{data} = axios('https://snowshop.herokuapp.com/items')
         dispatch({
             type: 'MAIN_GET',
             payload: data
@@ -60,17 +60,17 @@ const ContextItemProvider = ({children}) => {
     }
 
     const addItems = async (newItems) =>{
-        await axios.post('http://localhost:8000/items', newItems)
+        await axios.post('https://snowshop.herokuapp.com/items', newItems)
         getItems()
     }
 
     const delItems = async (id) =>{
-        await axios.delete(`http://localhost:8000/items/${id}`)
-        getItems('http://localhost:8000/items')
+        await axios.delete(`https://snowshop.herokuapp.com/items/${id}`)
+        getItems('https://snowshop.herokuapp.com/items')
     }
 
     const itemToEdit = async (id) =>{
-        let {data} = await axios(`http://localhost:8000/items/${id}`)
+        let {data} = await axios(`https://snowshop.herokuapp.com/items/${id}`)
         dispatch({
             type: 'EDIT_ITEMS',
             payload: data
@@ -78,13 +78,13 @@ const ContextItemProvider = ({children}) => {
     }
 
     const saveEdit = async(newItems)=>{
-        await axios.patch(`http://localhost:8000/items/${newItems.id}`, newItems)
+        await axios.patch(`https://snowshop.herokuapp.com/items/${newItems.id}`, newItems)
         getItems()
     }
 
     const getItemsDetail = async (id) => {
         // console.log(id)
-        let { data } = await axios(`http://localhost:8000/items/${id}`)
+        let { data } = await axios(`https://snowshop.herokuapp.com/items/${id}`)
         dispatch({
             type: 'GET_ITEMS_DETAIL',
             payload: data
@@ -93,14 +93,14 @@ const ContextItemProvider = ({children}) => {
     }
     const getproductsDataRating = async (id) => {
 
-        let { data, headers } = await axios(`http://localhost:8000/items/${id}`);
+        let { data, headers } = await axios(`https://snowshop.herokuapp.com/items/${id}`);
         dispatch({
             type: "GET_CONTACTS_DATA",
             payload: data
         })
     }
     const detailsTodo = async (id) => {
-        let { data } = await axios(`http://localhost:8000/items/${id}`)
+        let { data } = await axios(`https://snowshop.herokuapp.com/items/${id}`)
         dispatch({
             type: "DETAILS_TODO",
             payload: data
@@ -109,7 +109,7 @@ const ContextItemProvider = ({children}) => {
 
     async function ratingProduct(id, rating) {
         // console.log(id, rating);
-        await axios.patch(`http://localhost:8000/items/${id}`, { rating: rating })
+        await axios.patch(`https://snowshop.herokuapp.com/items/${id}`, { rating: rating })
         getproductsDataRating()
     }
 
