@@ -79,9 +79,9 @@ const Header = () => {
                         </Nav>
 
                         <Nav className="mx-auto">
-                            <Nav.Link><Link to="/">SKI</Link></Nav.Link>
-                            <Nav.Link><Link to="/">SNOWBOARD</Link></Nav.Link>
-                            <Nav.Link><Link to="/">COMPANY</Link></Nav.Link>
+                            <Nav.Link><Link to="/list">SKI</Link></Nav.Link>
+                            <Nav.Link><Link to="/list">SNOWBOARD</Link></Nav.Link>
+                            <Nav.Link><Link to="/company">COMPANY</Link></Nav.Link>
 
                         </Nav>
 
